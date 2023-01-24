@@ -21,9 +21,15 @@ html {
 }
 body {
   background-color: var(--background);
+
   min-height: 100vh;
-  font-family: var(--font);
-  font-size: 1.8rem;  
+
+  color: var(--text);
+  /* font-family: var(--font);
+  font-size: 1.6rem;
+  font-weight: 300; */
+  font: 300 1.6rem/1.6 var(--font);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,11 +38,88 @@ body {
 
 
 /* MAIN */
+.main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
 
 
+.card {
+  background: var(--cardBackground);
+  border-radius: 1.5rem;
+
+  width: 32.7rem;/* 
+  height: 54rem; */
+
+  padding: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.card__image {
+  border-radius: 1rem;
+}
+.card__title {
+  margin: 2.5rem 0 1.5rem;
+
+  color: var(--white);
+  font-size: 2.2rem;
+}
+
+
+.card__features {
+  border-bottom: 0.1rem solid var(--cardLine);
+
+  padding: 1.5rem 0;
+
+  display: flex;
+}
+
+.feature {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.feature--price {
+  color: var(--textHover);
+  font-weight: 400;
+}
+.feature--date {
+  justify-content: flex-end;
+}
+
+.feature__image {
+  height: 1.8rem;
+}
+
+.card__footer {
+  margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  border-radius: 50%;
+  border: 0.1rem solid var(--white);
+
+  width: 3rem;
+
+  margin-right: 2rem;
+}
+.name-link {
+  margin-left: 0.5rem;
+
+  color: var(--white);
+}
 
 
 /* FOOTER */
+.footer {
+  flex-grow: 0;
+}
+
 .attribution { 
   height: 2rem;
   color: var(--white);
